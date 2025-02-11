@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:insert="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8">
+<title>Second Page</title>
+</head>
+<body>
+
+	<section class="banner">
+		<div class="text-center">
+			<span class="font-weight-bold" id="text"></span>
+			<p class="mt-2">Smart Contact Manager helps you keep all your
+				contacts in one place. Stay organized and easily find the
+				information you need!</p>
+			<button class="btn bg-primary btn-lg text-white">Get Started</button>
+		</div>
+
+		<!-- Include Typed.js from a CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+
+		<script>
+			var typed = new Typed("#text", {
+				strings : [ "Smart Contact Manager" ],
+				typeSpeed : 100,
+				backSpeed : 100,
+				backDelay : 1000,
+				loop : true,
+				showCursor : false
+			});
+		</script>
+
+	</section>
+	
+</body>
+</html>
+
+
+<!-- Base Template (base.html)
+This is the layout template that contains the overall structure of the web page. It includes things like the HTML structure, external CSS (Bootstrap), and JavaScript files. It also defines a fragment for content insertion.
+
+th:fragment="layout(content)": This defines a fragment called layout in the base.html template. The content part is a placeholder where dynamic content (from other pages) will be inserted.
+
+<div th:replace="${content}"></div>: This is where dynamic content will be placed. The value of content is passed from another page (like home.html). The th:replace directive replaces this div with the content from the other page.
+
+<title th:text="${title}">Hello, world!</title>: This sets the title of the page dynamically. The value of ${title} will be provided from the controller or page using this layout. If no value is provided, the default text Hello, world! will be used.
+
+2. Home Page (home.html)
+This is a child page that uses the base.html layout. It contains the specific content for the home page.
+
+th:insert="base::layout(~{::section})": This tells Thymeleaf to use the base.html layout and insert the content of the home.html page into the content section of base.html. It inserts the content defined within the <section> tag of the home.html.
+
+<section>: The actual content that will be inserted into the base.html layout. Here, it contains two <h1> tags, one that says "this is home Page" and the other that says "Hello Vaibhav."
+
+Key Thymeleaf Concepts in Use:
+Fragments: Reusable pieces of templates that can be included in other templates. In this case, the base.html defines a layout fragment, and home.html inserts its content into that fragment.
+
+Dynamic Content: The ${title} and ${content} variables are placeholders that will be replaced by dynamic values when the page is rendered.
+
+th:replace and th:insert: These are used to replace or insert content dynamically. The content from home.html is inserted into base.html at the location of the th:replace tag.
+
+Flow of Execution:
+The server renders home.html.
+home.html uses base.html as a layout (through th:insert).
+The content inside the <section> tag of home.html is inserted into the <div th:replace="${content}"> placeholder in base.html.
+The final HTML output is a combination of the base layout and the home page content, resulting in a complete web page. -->

@@ -1,0 +1,106 @@
+<!-- <!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Profile</title>
+</head>
+<body>
+	<section>
+		<div class="container-fluid text-center">
+			<div class="card p-4">
+				<div style="display:block">
+					<img class="my_profile_photo mt-3 mb-3"
+						style="height: 200px; width: 200px" alt="profile_photo" src=""
+						th:src="@{'/IMG/'+${user.imgUrl}}">
+					<h1>
+						<span th:text="${user.name}"></span>
+					</h1>
+				</div>
+				<table class="table table-bordered table-hover">
+					<caption class="text-primary fs-5">Profile</caption>
+					<thead class="table-dark">
+						<tr>
+							<th scope="col">User ID</th>
+							<th scope="col" th:text="${user.id}">ID</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<th scope="row">User Name</th>
+							<td th:text="${user.name}">Name</td>
+						</tr>
+						<tr>
+							<th scope="row">User Email</th>
+							<td th:text="${user.email}">Email</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+		</div>
+		<script>
+    $(document).ready(()=> {
+    	$(".item").removeClass("active");
+    	$("#profile-link").addClass("active");
+    });
+    </script>
+	</section>
+</body>
+</html> -->
+
+
+
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Profile</title>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, shrink-to-fit=no">
+</head>
+<body>
+	<section>
+		<div class="container-fluid text-center">
+			<div class="card mr-3" style="background-color: #f4f4f4">
+				<div class="card-body">
+					<img class="my_profile_photo mt-3 mb-3"
+						style="height: 200px; width: 200px" alt="profile_photo" src=""
+						th:src="@{'/IMG/'+${user.imgUrl}}">
+					<h1>
+						<span th:text="${user.name}"></span>
+					</h1>
+				</div>
+				<div class="table-responsive profile-table">
+					<table class="table table-bordered table-hover">
+						<caption class="text-primary fs-5">Profile</caption>
+						<thead class="table-dark">
+							<tr>
+								<th scope="col">User ID</th>
+								<th scope="col" th:text="${user.id}">ID</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<th scope="row">User Name</th>
+								<td th:text="${user.name}">Name</td>
+							</tr>
+							<tr>
+								<th scope="row">User Email</th>
+								<td th:text="${user.email}">Email</td>
+							</tr>
+						</tbody>
+					</table>
+
+				</div>
+			</div>
+		</div>
+		<script>
+        $(document).ready(()=> {
+            $(".item").removeClass("active");
+            $("#profile-link").addClass("active");
+        });
+        </script>
+	</section>
+</body>
+</html>

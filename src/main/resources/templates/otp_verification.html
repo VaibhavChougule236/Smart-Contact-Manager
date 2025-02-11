@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Login</title>
+<link rel="stylesheet"
+	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+</head>
+<body>
+	<section id="login">
+		<div class="container">
+			<div class="row justify-content-center align-items-center">
+				<div class="col-md-8">
+					<div class="card m-5">
+						<div class="card-body">
+							<div style="height: 240px;" class="text-center">
+								<h3>Verify OTP...</h3>
+								<br>
+								<div class="alert alert-success" role="alert">OTP Sent
+									Successfully....!</div>
+								<!-- Message -->
+								<div th:if="${message}" th:classappend="${message.type}"
+									class="alert ml-5 mr-5 " style="height: 50px; padding: 10px;" role="alert">
+									<p class="text-center" th:text="${message.content}"></p>
+								</div>
+							<form action="" th:action="@{/otp-verified}" method="POST">
+								<div class="form-group">
+									<input name="otp" type="text" class="form-control"
+										placeholder="Enter OTP here" required>
+								</div>
+								<button type="submit" class="btn btn-success mt-3">Verify</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+	</section>
+
+</body>
+</html>
