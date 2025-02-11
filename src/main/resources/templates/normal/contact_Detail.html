@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:replace="normal/base::layout(~{::section})">
+<head>
+<meta charset="UTF-8" />
+<title>Contact Details</title>
+</head>
+<body>
+	<section>
+		<div class="text-center" th:if="${contact}">
+			<h1>Contact Details</h1>
+			<div class="container-fluid text-center">
+				<div class="card mr-3" style="background-color: #f4f4f4">
+					<div class="card-body">
+						<img class="my_profile_photo" style="height: 200px; width: 200px"
+							alt="profile_photo" src="" th:src="@{'/IMG/'+${contact.imgUrl}}">
+
+						<h1 th:text="${contact.name}"></h1>
+
+
+						<div class="description">
+							<th:block th:text="${contact.description}"></th:block>
+
+
+						</div>
+						<div class="table-responsive profile-table">
+							<table class="table table-bordered table-hover">
+								<thead>
+									<tr>
+										<th scope="col">#ContactId</th>
+										<td scope="row"><span th:text="${contact.cId}">1</span></td>
+
+
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<th scope="col">Name</th>
+										<td scope="row"><span th:text="${contact.name}">1</span></td>
+
+									</tr>
+									<tr>
+										<th scope="col">Email</th>
+										<td scope="row"><span th:text="${contact.email}">1</span></td>
+
+
+									</tr>
+									<tr>
+										<th scope="col">Phone No</th>
+										<td scope="row"><span th:text="${contact.phone}">1</span></td>
+
+
+									</tr>
+
+								</tbody>
+							</table>
+						</div>
+						<div class="container mt-3">
+
+							<form method="post"
+								th:action="@{'/user/update_form/'+${contact.cId}}">
+								<button type="submit"
+									class="btn btn-primary btn-sm btn-block mb-1">Update</button>
+							</form>
+							<button href="" th:onclick="|deleteContact(${contact.cId})|"
+								class="btn btn-danger btn-sm btn-block">Delete</button>
+
+
+						</div>
+
+
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<div class=" card-body" th:unless="${contact}">
+			<h1>Contact not found</h1>
+		</div>
+		</script>
+	</section>
+</body>
+</html>
+

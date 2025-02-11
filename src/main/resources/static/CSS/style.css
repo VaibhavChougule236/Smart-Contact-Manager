@@ -1,0 +1,259 @@
+body {
+	background: RGB(120, 120, 120) !important;
+	/* background: url(../IMG/background1.jpg); */
+	background-size: cover;
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+}
+
+.bg-primary {
+	background: #009688 !important;
+}
+
+.banner {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	height: 93vh;
+	background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .8)),
+		url(../IMG/1333846.png);
+	background-size: cover;
+	color: white;
+}
+
+.banner #text {
+	font-size: 2.5em; 
+	font-weight: bold;
+	line-height: 1.2; 
+	color: #ffffff;
+	margin: 0;
+}
+
+#my-card {
+	background: #FFFFFF;
+	padding: 20px;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	border-radius: 10px;
+}
+
+#button1:hover {
+	/* visibility: hidden; */
+	
+}
+
+#morestyle {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	position: sticky;
+	top: 0;
+	z-index: 1020;
+	background-color: transparent;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0
+		rgba(255, 255, 255, 0.15);
+}
+
+#morestyleDashboard {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	top: 0;
+	z-index: 1020;
+	background-color: transparent;
+	box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15), inset 0 -1px 0
+		rgba(255, 255, 255, 0.15);
+}
+
+/* <div class="position-static">...</div>
+<div class="position-relative">...</div>
+<div class="position-absolute">...</div>
+<div class="position-fixed">...</div>
+<div class="position-sticky">...</div> */
+.container {
+	height: 100%;
+	align-content: center;
+}
+
+.my-card {
+	height: 440px;
+	margin-top: 50px;
+	margin-bottom: auto;
+	width: 400px;
+	background-color: rgba(0, 0, 0, 0.5) !important;
+}
+
+.social_icon span {
+	font-size: 60px;
+	margin-left: 10px;
+	color: #FFC312;
+}
+
+.social_icon span:hover {
+	color: white;
+	cursor: pointer;
+}
+
+.my-card-header h3 {
+	color: white;
+}
+
+.social_icon {
+	position: absolute;
+	right: 20px;
+	top: -45px;
+}
+
+.input-group-prepend span {
+	width: 50px;
+	background-color: #FFC312;
+	color: black;
+	border: 0 !important;
+}
+
+input:focus {
+	outline: 0 0 0 0 !important;
+	box-shadow: 0 0 0 0 !important;
+}
+
+.remember {
+	color: white;
+}
+
+.remember input {
+	width: 20px;
+	height: 20px;
+	margin-left: 15px;
+	margin-right: 5px;
+}
+
+.login_btn {
+	color: black;
+	background-color: #FFC312;
+	width: 100px;
+}
+
+.login_btn:hover {
+	color: black;
+	background-color: white;
+}
+
+.links {
+	color: white;
+}
+
+.links a {
+	margin-left: 4px;
+}
+
+/* side bar */
+.sidebar {
+	width: 20%;
+	background: #f7f9fc;
+	height: 100%;
+	position: fixed;
+	z-index: 999;
+	border: thin solid gray;
+}
+
+.sidebar a {
+	display: block;
+	width: 100%;
+	padding: 10px 25px;
+	text-decoration: none;
+	color: gray;
+	
+}
+
+.sidebar a:hover {
+	background: #e2e2e2;
+}
+
+.content {
+	margin-top: 55px;
+	margin-left: 21%;
+}
+
+.sidebar .divider {
+	height: 1px;
+	width: 100%;
+	background: #e2e2e2;
+	margin-top: 10px;
+}
+
+@media only screen and (max-width:600px) {
+	.sidebar {
+		display: none;
+		width: 80% !important;
+		background: #f7f9fc;
+		height: 100vh;
+		position: fixed;
+		padding-top: 20px;
+	}
+	.content {
+		margin-top: 55px;
+		margin-left: 0% !important;
+	}
+	.featuresweb {
+		max-width: 100%;
+		margin: 20px 0;
+		height: auto;
+	}
+}
+
+@media only screen and (max-width:800px) {
+	.featuresweb {
+		max-width: 100%;
+		margin: 20px 0;
+		height: auto;
+	}
+}
+
+.active {
+	background: #009688 !important;
+	color: white !important;
+	font-weight: 200px !important;
+}
+
+/* Add Contact */
+
+/* profile photo */
+.my_profile_photo {
+	width: 30px;
+	height: 30px;
+	border-radius: 80px;
+	object-fit: cover;
+	text-decoration: none;
+}
+
+/* search  */
+.search-container {
+	border: 1px solid gray;
+	padding: 2px;
+	margin: 2px;
+	position: relative;
+}
+
+.search-container:hover {
+	
+}
+
+.search-result {
+	position: absolute;
+	width: 100%;
+	padding: 10px;
+	background: #e2e2e2;
+	border: 1px solid gray;
+	border-radius: 5px;
+	display: none;
+	margin-top: 2px;
+}
+
+footer{
+	background-color: RGB(28 65 102);
+	height:500px;
+}
